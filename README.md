@@ -44,12 +44,12 @@ We all are aware how slow Windows 11 is even on heavy hardware where it performs
 ### Basic
 This is the easy stuff that anyone can do. No risk involved, you can easy apply or remove these changes.
 
-#### Delete third party anti-virus software
+#### 1.  Delete third party anti-virus software
 Expected Impact: High (on Low-End hardware)
 
 Third party anti-virus software are not needed. The base Windows Defender is more than enough. The majority of anti-virus software eat up an extensive amount of resources like CPU and RAM, slowing down your device significantly. Using anti-virus software is equivalent to download free ram from the internet (You can't download RAM, all fake). Use Revo Uninstaller or BC Uninstaller if you want to remove its every trace from the device but normal uninstall is also fine.
 
-#### Update your drivers
+#### 2. Update your drivers
 While this may not do much for performance but it does improve the stability of different components on your device. Depending on what brand CPU you are running you may download the Driver software.
 - [Intel Driver Support Assistant](https://www.intel.com/content/www/us/en/support/detect.html)
 - [AMD Adrenalin Support Assistant](https://www.amd.com/en/products/software/adrenalin.html)
@@ -57,17 +57,17 @@ While this may not do much for performance but it does improve the stability of 
 Latest GPU drivers do provide performance uplift in the latest titles. This is not the case all the time but you may still keep it up to date. It is not required to update the driver to the latest one but after a few months its fine.
 - [Nvidia App](https://www.nvidia.com/en-us/software/nvidia-app/)
 - [AMD Adrenalin Support Assistant](https://www.amd.com/en/products/software/adrenalin.html)
-
-#### Use Microsoft PC Manager
+  
+#### 3. Use Microsoft PC Manager
 Expected Impact: Low
 
 [PC Manager](https://apps.microsoft.com/detail/9pm860492szd?referrer=psi&hl=en-US&gl=PK) is Microsoft's own product. It is available on Microsoft Store. It makes it easy to remove cache and deep clean storage to free up ram and storage. It is just like using the Cleaning app found in our Android/Apple phones.
 
-#### Use Wintoys
+#### 4. Use Wintoys
 Expected Impact: High (on Low-End hardware)
-
+  
 [Wintoys](https://apps.microsoft.com/detail/9p8ltpgcbzxd?hl=en-US&gl=PK) is a free app made for Windows. It is available on Microsoft Store. It brings a lot of options that may be deeply hidden in device manager or settings, up front. The UI is easy to use and configurations are self explanatory. 
-
+  
 **Recommended Settings**
 - Enable Ultimate Performance Power Plan: Ensures your CPU doesn't aggressively downclock during gameplay.
 - Turn on Hardware-Accelerated GPU Scheduling (HAGS): Offloads high-frequency task scheduling from the CPU to the GPU. This is excellent for reducing CPU bottlenecks on older processors.
@@ -81,29 +81,29 @@ Expected Impact: High (on Low-End hardware)
 ### Advanced
 This is where things get interesting. A lot of the changes from here will make very noticeable difference in performance and responsiveness. These wont corrupt any data but some may cause crashes if not setup properly.
 
-#### Use Winhance
+#### 1. Use Winhance
 Expected Impact: Low for Gaming, High for Responsiveness
-
+  
 [Winhance](https://winhance.net/) is another app free to use for Windows. It is easy to install and use just like Wintoys. You can remove any unwanted Microsoft app which windows may not allow to remove like Microsoft Edge or Copilot (I think you can remove copilot now normally) and use the "Optimize" section to improve the responsiveness of Windows.
-
+  
 Instructions:
 - Download and Install it.
 - Once opened, it may ask to create a Restore point which is up to you.
 - In Apps, you can remove Microsoft Edge which does take up resources by default and any other app you may not use.
 - In Optimization, you can go to "Quick Actions" and "Apply Recommended".
 - Optional: In Visuals, you can strip down the UI to its fasted and simplest look. This does make UI elements faster and more responsive.
-
-#### Other Drivers
+  
+#### 2. Other Drivers
 These are other drivers that may improve stability. This is optional as windows may have this up to date but should check on outdated hardware.
 - Chipset drivers which on older OEM devices may have to do manually like Dell and HP Workstations. This does improve stability. Double check versions to see which is newer.
 - Gaming RAM may have driver update as well. I did have an update on my DDR4 Corsair RAM but not on DDR3 ECC Rams or DDR4 Trident RAM, so this depends on brand.
 
-#### Use ISLC
+#### 3. Use ISLC
 Expected Impact: High for 1% Lows (Stuttering)
 
 [ISLC](https://www.wagnardsoft.com/content/Download-Intelligent-standby-list-cleaner-ISLC-1041) (Intelligent Standby List Cleaner) is a free software. This does not increase your maximum FPS, but on systems with 8GB or 16GB of RAM, it completely eliminates the micro-stutters caused by Windows failing to free up memory fast enough. It is recommended to watch a Youtube tutorial on how to use this properly.
 
-#### Use MSI Afterburner
+#### 4. Use MSI Afterburner
 Expected Impact: High
 
 [MSI Afterburner](https://www.msi.com/Landing/afterburner/graphics-cards) is the industry standard for GPU tuning. It allows you to push your hardware past factory limits for extra frames, or optimize it for cooler, quieter operation.
@@ -117,7 +117,7 @@ Cooling & Stability Tweaks:
 - Custom Fan Curve: The default GPU fan curves prioritize being completely silent, which causes the card to run unnecessarily hot. Setting an aggressive fan curve (e.g., 70% fan speed at 70°C) will keep the card icy and prevent heat-induced stutters.
 - RivaTuner Statistics Server (RTSS): This installs alongside Afterburner. It provides the On-Screen Display (OSD) so you can monitor your FPS, 1% lows, and hardware temperatures in real-time while in a game.
 
-#### Use Modded Windows
+#### 5. Use Modded Windows
 Expected Impact: Extreme
 
 This is not a separate installation of Windows rather it cleans up unnecessary bloat on system level files and services. You will need to disable Windows Defender to apply these changes but that is fine, no data will be harmed. It is completely safe to use (If the device restarts automatically and no prompt then you may need to redo the process again but it wont do that again next time). I have tested [ReviOS](https://www.revi.cc/) & [AtlasOS](https://atlasos.net/) personally. There are more options available depending on your needs but for gaming AtlasOS & ReviOS are mostly recommended.
@@ -126,7 +126,7 @@ If you are unsure about its safety, you can check out their web page or tutorial
 
 ## Linux
 
-#### Distributions
+#### 1. Distributions
 On Linux you dont need to download individual apps for managing drivers, the package manager handles that automatically by checking your hardware. This is really great of hardware with drivers that may be unlisted online. AMD Athlon CPUs (DDR3 Supported) which fell much behind Intel's CPUs (DDR3 Supported) work much better on Linux (This is not personally tested but have researched about it). Linux is always recommended for unique pieces of hardware. If you plan to switch to Linux, I have some recommended distros that I have tested are listed below.
 
 Recommended Distros:
@@ -135,13 +135,13 @@ Recommended Distros:
 - **EndeavourOS** is a good balance for work and gaming.
 - **Ubuntu/Fedora** are a safe starting point.
 
-#### Optimizations
+#### 2. Optimizations
 On Steam you can use commands to change the behavior of how some games are launched.
 - Use GE_Proton. You can download the ProtonUp-Qt tool to easily install the latest version of Proton GE. Run `sudo pacman -S protonup-qt` or `yay -S protonup-qt` (depending on your package manager), or download it via Flatpak. Open the app, install the latest GE-Proton, then go to Steam Settings > Compatibility and change the default tool to your newly installed GE-Proton version.
 - "VKD3D_CONFIG=no_upload_hvv %command%" prevents severe VRAM spilling, fixing massive stuttering and freezing in heavy DirectX 12 games.
 - "gamemoderun %command%" Provides a minor 1-3% FPS uplift but ensures your CPU stays at maximum clock speeds, preventing random frame drops during explosions or heavy scenes. `sudo pacman -S gamemode` or `yay -S gamemode` (depending on your package manager).
 
-#### LACT GPU OverClocking
+#### 3. LACT GPU OverClocking
 Expected Impact: High
 
 Since MSI Afterburner is not available on Linux, we use an incredible community-built alternative called **LACT (Linux GPU Control Application)** that provides the exact same functionality. Originally built just for AMD, LACT now fully supports AMD, Nvidia, and Intel GPUs all inside one unified, easy-to-use GUI.
