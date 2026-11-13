@@ -1,28 +1,29 @@
-# How-to-get-the-most-performance-out-of-your-PC-Guide
-The ultimate gamer's guide to fixing PC lag, debloating Windows, and boosting FPS through deep system tuning.
+# How to get the most performance out of your PC Guide
+The ultimate gamer's guide to fixing PC lag, debloating Windows, improving latency & boosting FPS through deep system tuning.
 
-> [!WARNING] Disclaimer & Liability
+## WARNING! 
+### Disclaimer & Liability
 > By proceeding with this guide, you accept full responsibility for your hardware, data, and system stability. I have structured this guide to isolate risks so you know exactly what you are changing.
 > 
 > Risk Breakdown by Category:
 > 
-> - **Basic & Advanced Optimizations (Windows):** Completely safe. These steps utilize vetted software and standard OS settings. They will not cause data loss, hardware damage, or OS corruption.
+> - **Basic & Advanced Optimizations (Windows):** Completely safe. These steps utilize tested software and standard OS settings. They will not cause data loss, hardware damage, or OS corruption.
 > - **Extreme Optimizations (Hardware & Deep OS):** Installing custom, stripped-down operating systems (ReviOS / AtlasOS), adjusting BIOS parameters, and tuning GPU clocks via MSI Afterburner carry inherent risks. While generally safe if instructions are followed precisely, incorrect values can lead to system instability, thermal throttling, crashes, or the need for a clean Windows reinstall.
 > - **Linux Optimizations:** Completely safe. The Linux section relies strictly on standard Steam launch options and basic terminal commands. No deep kernel-level modifications are required.
-
+>
 > Safety Measures:
 > - Do your own research on your own components like idle/use temps, CPU PL1 & PL2, Overclocking limits based on the options when working on BIOS.
-> - Use HWMonitor to keep on voltage/wattage of components
+> - Use HWMonitor to keep a check on voltage/wattage of components
 > - Use TaskManager or HWMonitor to keep track of your thermals
 
-### Tested Hardware
-The hardware mentioned here are my own that was owned at some point.
+## Tested Hardware
+The hardware mentioned here are my own that were owned at some point.
 
 #### PC CPUs & GPUs
-- i5 4570 + GTX 1050 Ti 4gb + 12gb ECC DDR3 RAM (Z230 Workstation)
-- Xeon E3 1275 V3 (i7 4770) + GTX 1650 4gb + 16gb DDR3 RAM (Asus Q87M-E)
-- Ryzen 5 5600X + GTX 1080 8gb + 16gb DDR4 RAM (Biostar B450)
-- i7 11700K + RTX 3060 Ti 8gb + 24gb DDR4 RAM (Gigabyte Z590D)
+- Z230 Workstation: i5 4570 + GTX 1050 Ti 4gb + 12gb ECC DDR3 RAM
+- Asus Q87M-E: Xeon E3 1275 V3 (i7 4770) + GTX 1650 4gb + 16gb DDR3 RAM
+- Biostar B450: Ryzen 5 5600X + GTX 1080 8gb + 16gb DDR4 RAM
+- Gigabyte Z590D: i7 11700K + RTX 3060 Ti 8gb + 24gb DDR4 RAM
 
 #### Laptops
 - HP Probook 6570b | i7 3840QM (integrated)
@@ -35,38 +36,39 @@ The hardware mentioned here are my own that was owned at some point.
 2. [Linux Optimizations](#linux)
 3. [BIOS Tweaks & Overclocking](#bios)
 
-# Guide
-I have personally researched and tested all of the optimization techniques on multiple devices belonging to me, my friends and family members and optimized them according to their needs. Most noticeable performance gains are on older outed hardware. You will not need to backup your data as all of these do not cause any modification to data present on your storage devices or even corrupt your OS. It is recommended you learn about these changes first and then perform those changes.
+# Introduction
+I have personally researched and tested all of the optimization techniques on multiple devices belonging to me, my friends and family members have optimized their hardware according to their needs. Most noticeable performance gains are on older outed hardware. It is recommended you learn about these changes first and then perform those changes, regardless of their difficulty.
 
-## Windows
-We all are aware how slow Windows 11 is even on heavy hardware where it performs sluggish. I always recommend Windows 10 for better user experience and performance but whether you are on Windows 10 or 11 these following steps should improve performance overall and leave a small performance gap between Windows 10 and 11.
+# Windows
+We all are aware of how slow & sluggish the Windows experience is. I always recommend Windows 10 for a far better user experience. Windows 10 or 11 these following steps will give you a significant uplift in performance in gaming latency and fps.
 
-### Basic
-This is the easy stuff that anyone can do. No risk involved, you can easy apply or remove these changes.
+## Basic
 
-#### 1.  Delete third party anti-virus software
-Expected Impact: High (on Low-End hardware)
+#### 1. Delete third party anti-virus software
+Expected Impact: High *(on Low-End hardware)*
 
-Third party anti-virus software are not needed. The base Windows Defender is more than enough. The majority of anti-virus software eat up an extensive amount of resources like CPU and RAM, slowing down your device significantly. Using anti-virus software is equivalent to download free ram from the internet (You can't download RAM, all fake). Use Revo Uninstaller or BC Uninstaller if you want to remove its every trace from the device but normal uninstall is also fine.
+Third party anti-virus software are a scam. The base Windows Defender is enough and is managed actively by Microsoft. These eat up an extensive amount of resources like CPU and RAM, increasing boot time and slowing down your device significantly. Use Revo Uninstaller or BC Uninstaller if you want to remove its every trace from the device but normal uninstall is also fine.
 
 #### 2. Update your drivers
-While this may not do much for performance but it does improve the stability of different components on your device. Depending on what brand CPU you are running you may download the Driver software.
+Expected Impact: Low
+
+While this may not do much for performance but stability of different components on your device is improved. Depending on what brand CPU you are running you may download the Driver software.
 - [Intel Driver Support Assistant](https://www.intel.com/content/www/us/en/support/detect.html)
 - [AMD Adrenalin Support Assistant](https://www.amd.com/en/products/software/adrenalin.html)
 
-Latest GPU drivers do provide performance uplift in the latest titles. This is not the case all the time but you may still keep it up to date. It is not required to update the driver to the latest one but after a few months its fine.
+Latest GPU drivers do provide performance uplift in the latest titles.
 - [Nvidia App](https://www.nvidia.com/en-us/software/nvidia-app/)
 - [AMD Adrenalin Support Assistant](https://www.amd.com/en/products/software/adrenalin.html)
   
 #### 3. Use Microsoft PC Manager
 Expected Impact: Low
 
-[PC Manager](https://apps.microsoft.com/detail/9pm860492szd?referrer=psi&hl=en-US&gl=PK) is Microsoft's own product. It is available on Microsoft Store. It makes it easy to remove cache and deep clean storage to free up ram and storage. It is just like using the Cleaning app found in our Android/Apple phones.
+[PC Manager](https://apps.microsoft.com/detail/9pm860492szd?referrer=psi&hl=en-US&gl=PK) is Microsoft's own product, available on Microsoft Store. It makes it easy to remove cache and deep clean storage to free up ram and storage, just like using the cleaning app found in our phones.
 
 #### 4. Use Wintoys
-Expected Impact: High (on Low-End hardware)
+Expected Impact: High *(on Low-End hardware)*
   
-[Wintoys](https://apps.microsoft.com/detail/9p8ltpgcbzxd?hl=en-US&gl=PK) is a free app made for Windows. It is available on Microsoft Store. It brings a lot of options that may be deeply hidden in device manager or settings, up front. The UI is easy to use and configurations are self explanatory. 
+[Wintoys](https://apps.microsoft.com/detail/9p8ltpgcbzxd?hl=en-US&gl=PK) is a free app for Windows, available on Microsoft Store. It brings a lot of options that may be deeply hidden in control panel and settings, up front.
   
 **Recommended Settings**
 - Enable Ultimate Performance Power Plan: Ensures your CPU doesn't aggressively downclock during gameplay.
@@ -78,13 +80,13 @@ Expected Impact: High (on Low-End hardware)
 - Turn off Fast Startup: Since we already configured "Fast Boot" in the BIOS, disabling Windows' software Fast Startup ensures your PC actually fully shuts down and clears the RAM cache completely, preventing weird OS bugs and stutters over time.
 - Disable Visual Effects (Low-End Only): If you are on an older laptop or very weak CPU, turning off transparency effects and UI animations makes desktop navigation feel instantly faster.
 
-### Advanced
-This is where things get interesting. A lot of the changes from here will make very noticeable difference in performance and responsiveness. These wont corrupt any data but some may cause crashes if not setup properly.
+## Advanced
+This is where things get interesting. These changes will provide significant and **very noticeable** uplift in gaming performance and also provide a smoother and faster OS experience.
 
 #### 1. Use Winhance
 Expected Impact: Low for Gaming, High for Responsiveness
   
-[Winhance](https://winhance.net/) is another app free to use for Windows. It is easy to install and use just like Wintoys. You can remove any unwanted Microsoft app which windows may not allow to remove like Microsoft Edge or Copilot (I think you can remove copilot now normally) and use the "Optimize" section to improve the responsiveness of Windows.
+[Winhance](https://winhance.net/) is a free app for Windows, easy to install and use. You can remove any unwanted Microsoft app which windows may not allow to remove like Microsoft Edge or Copilot etc and use the "Optimize" section to improve the responsiveness of Windows.
   
 Instructions:
 - Download and Install it.
@@ -92,21 +94,20 @@ Instructions:
 - In Apps, you can remove Microsoft Edge which does take up resources by default and any other app you may not use.
 - In Optimization, you can go to "Quick Actions" and "Apply Recommended".
 - Optional: In Visuals, you can strip down the UI to its fasted and simplest look. This does make UI elements faster and more responsive.
-  
-#### 2. Other Drivers
-These are other drivers that may improve stability. This is optional as windows may have this up to date but should check on outdated hardware.
-- Chipset drivers which on older OEM devices may have to do manually like Dell and HP Workstations. This does improve stability. Double check versions to see which is newer.
-- Gaming RAM may have driver update as well. I did have an update on my DDR4 Corsair RAM but not on DDR3 ECC Rams or DDR4 Trident RAM, so this depends on brand.
 
-#### 3. Use ISLC
-Expected Impact: High for 1% Lows (Stuttering)
+#### 2. Use ISLC
+Expected Impact: High for 1% Lows *(Stuttering)*
 
-[ISLC](https://www.wagnardsoft.com/content/Download-Intelligent-standby-list-cleaner-ISLC-1041) (Intelligent Standby List Cleaner) is a free software. This does not increase your maximum FPS, but on systems with 8GB or 16GB of RAM, it completely eliminates the micro-stutters caused by Windows failing to free up memory fast enough. It is recommended to watch a Youtube tutorial on how to use this properly.
+> *It is recommended you follow a youtube guide to use this app.*
 
-#### 4. Use MSI Afterburner
+[ISLC](https://www.wagnardsoft.com/content/Download-Intelligent-standby-list-cleaner-ISLC-1041) *(Intelligent Standby List Cleaner)* is a free software. This does not increase your fps, but on systems with 8GB or 16GB of RAM, it completely eliminates the micro-stutters caused by Windows failing to free up memory fast enough. 
+
+#### 3. Use MSI Afterburner
 Expected Impact: High
 
-[MSI Afterburner](https://www.msi.com/Landing/afterburner/graphics-cards) is the industry standard for GPU tuning. It allows you to push your hardware past factory limits for extra frames, or optimize it for cooler, quieter operation.
+> *It is recommended you follow a youtube guide to use this app.*
+
+[MSI Afterburner](https://www.msi.com/Landing/afterburner/graphics-cards) is the industry standard for GPU tuning. It allows you to push your hardware past factory limits for extra frames, or optimize it for cooler, quieter operation. 
 
 Basic Overclocking (More FPS):
 - Power Limit: Slide the power limit to its maximum. This safely allows the GPU to draw more wattage when needed to maintain higher boost clocks during heavy gaming scenes.
@@ -120,31 +121,43 @@ Cooling & Stability Tweaks:
 #### 5. Use Modded Windows
 Expected Impact: Extreme
 
-This is not a separate installation of Windows rather it cleans up unnecessary bloat on system level files and services. You will need to disable Windows Defender to apply these changes but that is fine, no data will be harmed. It is completely safe to use (If the device restarts automatically and no prompt then you may need to redo the process again but it wont do that again next time). I have tested [ReviOS](https://www.revi.cc/) & [AtlasOS](https://atlasos.net/) personally. There are more options available depending on your needs but for gaming AtlasOS & ReviOS are mostly recommended.
+> *It is recommended you follow a youtube guide to use this app.*
 
-If you are unsure about its safety, you can check out their web page or tutorials on Youtube. Instructions to install them can be found online providing a better guide or on official web page of modded OS's.
+This is not a separate installation of Windows, it cleans up unnecessary bloat by removing unnecessary system level processes and services from running. You will need to disable Windows Defender to apply these changes, it is safe to use, no data will be harmed. *If the device restarts automatically and no prompt then you may need to redo the process again but it wont do that again next time*. I have personally used [ReviOS](https://www.revi.cc/) & [AtlasOS](https://atlasos.net/), more options available depending on your requirements.
 
-## Linux
+# Linux
+On older hardware, Linux can extend its capabilities. With how far Linux has come, it can even run modern games in some cases faster and smoother than windows.
 
-#### 1. Distributions
-On Linux you dont need to download individual apps for managing drivers, the package manager handles that automatically by checking your hardware. This is really great of hardware with drivers that may be unlisted online. AMD Athlon CPUs (DDR3 Supported) which fell much behind Intel's CPUs (DDR3 Supported) work much better on Linux (This is not personally tested but have researched about it). Linux is always recommended for unique pieces of hardware. If you plan to switch to Linux, I have some recommended distros that I have tested are listed below.
-
-Recommended Distros:
+Used Distros:
 - **CachyOS** is best for gaming performance.
 - **Bazzite** almost there but provides the best setup for gaming.
 - **EndeavourOS** is a good balance for work and gaming.
 - **Ubuntu/Fedora** are a safe starting point.
 
-#### 2. Optimizations
-On Steam you can use commands to change the behavior of how some games are launched.
-- Use GE_Proton. You can download the ProtonUp-Qt tool to easily install the latest version of Proton GE. Run `sudo pacman -S protonup-qt` or `yay -S protonup-qt` (depending on your package manager), or download it via Flatpak. Open the app, install the latest GE-Proton, then go to Steam Settings > Compatibility and change the default tool to your newly installed GE-Proton version.
-- "VKD3D_CONFIG=no_upload_hvv %command%" prevents severe VRAM spilling, fixing massive stuttering and freezing in heavy DirectX 12 games.
-- "gamemoderun %command%" Provides a minor 1-3% FPS uplift but ensures your CPU stays at maximum clock speeds, preventing random frame drops during explosions or heavy scenes. `sudo pacman -S gamemode` or `yay -S gamemode` (depending on your package manager).
+## Optimizations
 
-#### 3. LACT GPU OverClocking
+#### 1. Steam Commands
 Expected Impact: High
 
-Since MSI Afterburner is not available on Linux, we use an incredible community-built alternative called **LACT (Linux GPU Control Application)** that provides the exact same functionality. Originally built just for AMD, LACT now fully supports AMD, Nvidia, and Intel GPUs all inside one unified, easy-to-use GUI.
+On Steam you can use commands to change the behavior of how some games are launched.
+- Use GE_Proton. 
+- `VKD3D_CONFIG=no_upload_hvv %command%` prevents severe VRAM spilling, fixing massive stuttering and freezing in heavy DirectX 12 games.
+- `gamemoderun %command%` Provides a minor 1-3% FPS uplift but ensures your CPU stays at maximum clock speeds, preventing random frame drops during explosions or heavy scenes. `sudo pacman -S gamemode` or `yay -S gamemode` *(depending on your package manager)*.
+
+#### 2. Use Proton GE
+Expected Impact: High *(Hardware must support Vulkun 1.3+)*
+
+Proton converts DirectX games to Vulkun. Proton GE is a boosted version of normal Proton. You can download the ProtonUp-Qt tool to easily install the latest version of Proton GE. 
+
+Instruction:
+- Run `sudo pacman -S protonup-qt` or `yay -S protonup-qt` (depending on your package manager), or download it via Flatpak.
+- Open the app, install the latest GE-Proton.
+- Open Steam, go to Steam Settings > Compatibility and change the default tool to your newly installed GE-Proton version.
+
+#### 3. LACT
+Expected Impact: High
+
+An alternative to MSI Afterburner for Linux, we **LACT (Linux GPU Control Application)** that provides the exact same functionality. Originally built just for AMD, LACT now fully supports AMD, Nvidia, and Intel GPUs all inside one unified, easy-to-use GUI.
 
 - **For All GPUs (AMD, Nvidia, Intel):** LACT allows you to easily push your GPU's core clocks, VRAM clocks, and power limits for basic overclocking. 
 - **Cooling & Undervolting:** Once your clocks are set, you can use LACT to apply a slight undervolt and set a custom fan curve. This keeps the card icy and allows it to boost higher for longer periods without hitting thermal limits.
@@ -152,7 +165,7 @@ Since MSI Afterburner is not available on Linux, we use an incredible community-
 
 *(Note for Nvidia Users: To unlock overclocking limits, you may still need to enable the "Coolbits" registry value via the terminal in your Nvidia driver settings before LACT can apply clock offsets).*
 
-## Bios
+# Bios
 > Warning! This requires careful execution knowledge.
 
 Things can get risky here so learn about it and take your time, improper values may brick the components entirely so do it at your own risk but do set your CPU Power Limits (PL1 / PL2) regardless.
