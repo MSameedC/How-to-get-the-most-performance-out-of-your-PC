@@ -46,12 +46,12 @@ We all are aware of how slow & sluggish the Windows experience is. I always reco
 ## Basic
 
 #### 1. Delete third party anti-virus software
-Expected Impact: High *(on Low-End hardware)*
+Expected Impact: High for Performance & Latency (on Low-End hardware) | Safe
 
 Third party anti-virus software are a scam. The base Windows Defender is enough and is managed actively by Microsoft. These eat up an extensive amount of resources like CPU and RAM, increasing boot time and slowing down your device significantly. Use Revo Uninstaller or BC Uninstaller if you want to remove its every trace from the device but normal uninstall is also fine.
 
 #### 2. Update your drivers
-Expected Impact: Low
+Expected Impact: Low for Performance | Medium for Stability | Safe
 
 While this may not do much for performance but stability of different components on your device is improved. Depending on what brand CPU you are running you may download the Driver software.
 - [Intel Driver Support Assistant](https://www.intel.com/content/www/us/en/support/detect.html)
@@ -62,12 +62,12 @@ Latest GPU drivers do provide performance uplift in the latest titles.
 - [AMD Adrenalin Support Assistant](https://www.amd.com/en/products/software/adrenalin.html)
   
 #### 3. Use Microsoft PC Manager
-Expected Impact: Low
+Expected Impact: Low for Performance & Stability | Safe
 
 [PC Manager](https://apps.microsoft.com/detail/9pm860492szd?referrer=psi&hl=en-US&gl=PK) is Microsoft's own product, available on Microsoft Store. It makes it easy to remove cache and deep clean storage to free up ram and storage, just like using the cleaning app found in our phones.
 
 #### 4. Use Wintoys
-Expected Impact: High *(on Low-End hardware)*
+Expected Impact: High for Performance & Latency (on Low-End hardware) | Low Risk for Safety (VBS/Core Isolation)
   
 [Wintoys](https://apps.microsoft.com/detail/9p8ltpgcbzxd?hl=en-US&gl=PK) is a free app for Windows, available on Microsoft Store. It brings a lot of options that may be deeply hidden in control panel and settings, up front.
   
@@ -85,7 +85,7 @@ Expected Impact: High *(on Low-End hardware)*
 This is where things get interesting. These changes will provide significant and **very noticeable** uplift in gaming performance and also provide a smoother and faster OS experience.
 
 #### 1. Use Winhance
-Expected Impact: Low for Gaming, High for Responsiveness
+Expected Impact: Low for Performance | High for Latency & Responsiveness | Low Risk for Stability
   
 [Winhance](https://winhance.net/) is a free app for Windows, easy to install and use. You can remove any unwanted Microsoft app which windows may not allow to remove like Microsoft Edge or Copilot etc and use the "Optimize" section to improve the responsiveness of Windows.
   
@@ -97,14 +97,14 @@ Instructions:
 - Optional: In Visuals, you can strip down the UI to its fasted and simplest look. This does make UI elements faster and more responsive.
 
 #### 2. Use ISLC
-Expected Impact: High for 1% Lows *(Stuttering)*
+Expected Impact: High for Latency & 1% Lows (Stuttering) | Safe
 
 > *It is recommended you follow a youtube guide to use this app.*
 
 [ISLC](https://www.wagnardsoft.com/content/Download-Intelligent-standby-list-cleaner-ISLC-1041) *(Intelligent Standby List Cleaner)* is a free software. This does not increase your fps, but on systems with 8GB or 16GB of RAM, it completely eliminates the micro-stutters caused by Windows failing to free up memory fast enough. 
 
 #### 3. Use MSI Afterburner
-Expected Impact: High
+Expected Impact: High for Performance & Cooling | Medium Risk for Stability & Cooling (Proceed with Caution)
 
 > *Works on discrete GPUs only*
 > *It is recommended you follow a youtube guide to use this app.*
@@ -121,7 +121,7 @@ Cooling & Stability Tweaks:
 - RivaTuner Statistics Server (RTSS): This installs alongside Afterburner. It provides the On-Screen Display (OSD) so you can monitor your FPS, 1% lows, and hardware temperatures in real-time while in a game.
 
 #### 4. Use Modded Windows
-Expected Impact: Extreme
+Expected Impact: High for Performance & Cooling | Medium Risk for Stability & Cooling (Proceed with Caution)
 
 > *It is recommended you follow a youtube guide to use this app.*
 
@@ -139,7 +139,7 @@ Used Distros:
 ## Optimizations
 
 #### 1. Steam Commands
-Expected Impact: High
+Expected Impact: High for Performance & Latency | Safe
 
 On Steam you can use commands to change the behavior of how some games are launched.
 - Use GE_Proton. 
@@ -147,7 +147,7 @@ On Steam you can use commands to change the behavior of how some games are launc
 - `gamemoderun %command%` Provides a minor 1-3% FPS uplift but ensures your CPU stays at maximum clock speeds, preventing random frame drops during explosions or heavy scenes. `sudo pacman -S gamemode` or `yay -S gamemode` *(depending on your package manager)*.
 
 #### 2. Use Proton GE
-Expected Impact: High *(Hardware must support Vulkun 1.3+)*
+Expected Impact: High for Performance & Stability (Hardware must support Vulkan 1.3+) | Safe
 
 Proton converts DirectX games to Vulkun. Proton GE is a boosted version of normal Proton. You can download the ProtonUp-Qt tool to easily install the latest version of Proton GE. 
 
@@ -157,7 +157,7 @@ Instruction:
 - Open Steam, go to Steam Settings > Compatibility and change the default tool to your newly installed GE-Proton version.
 
 #### 3. LACT
-Expected Impact: High
+Expected Impact: High for Performance & Stability (Hardware must support Vulkan 1.3+) | Safe
 
 > *Works on discrete GPUs only*
 > *It is recommended you follow a youtube guide to use this app.*
