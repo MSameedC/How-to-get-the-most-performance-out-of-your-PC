@@ -8,7 +8,8 @@ The ultimate gamer's guide to fixing PC lag, debloating Windows, improving laten
 > Risk Breakdown by Category:
 > 
 > - **Basic & Advanced Optimizations (Windows):** Completely safe. These steps utilize tested software and standard OS settings. They will not cause data loss, hardware damage, or OS corruption.
-> - **Extreme Optimizations (Hardware & Deep OS):** Installing custom, stripped-down operating systems (ReviOS / AtlasOS), adjusting BIOS parameters, and tuning GPU clocks via MSI Afterburner carry inherent risks. While generally safe if instructions are followed precisely, incorrect values can lead to system instability, thermal throttling, crashes, or the need for a clean Windows reinstall.
+> - **Extreme Optimizations (Deep OS):** Installing custom, stripped-down operating systems (ReviOS / AtlasOS), and tuning GPU clocks via MSI Afterburner carry inherent risks. While generally safe if instructions are followed precisely, incorrect values can lead to system instability, thermal throttling, crashes, or the need for a clean Windows reinstall.
+> - **Bios Setting:** It is strongly recommended that you follow a YouTube guide and research your specific motherboard and CPU before changing values. Otherwise, you can cause boot loops, overheating, or hardware instability.
 > - **Linux Optimizations:** Completely safe. The Linux section relies strictly on standard Steam launch options and basic terminal commands. No deep kernel-level modifications are required.
 >
 > Safety Measures:
@@ -19,13 +20,13 @@ The ultimate gamer's guide to fixing PC lag, debloating Windows, improving laten
 ## Tested Hardware
 The hardware mentioned here are my own that were owned at some point.
 
-#### PC CPUs & GPUs
+**PC CPUs & GPUs**
 - Z230 Workstation: i5 4570 + GTX 1050 Ti 4gb + 12gb ECC DDR3 RAM
 - Asus Q87M-E: Xeon E3 1275 V3 (i7 4770) + GTX 1650 4gb + 16gb DDR3 RAM
 - Biostar B450: Ryzen 5 5600X + GTX 1080 8gb + 16gb DDR4 RAM
 - Gigabyte Z590D: i7 11700K + RTX 3060 Ti 8gb + 24gb DDR4 RAM
 
-#### Laptops
+**Laptops**
 - HP Probook 6570b | i7 3840QM (integrated)
 - Dell Latitude 7389 | i7 7600U vPro (integrated)
 - Lenovo Thinkpad E595 | Ryzen 7 3700U (integrated)
@@ -105,6 +106,7 @@ Expected Impact: High for 1% Lows *(Stuttering)*
 #### 3. Use MSI Afterburner
 Expected Impact: High
 
+> *Works on discrete GPUs only*
 > *It is recommended you follow a youtube guide to use this app.*
 
 [MSI Afterburner](https://www.msi.com/Landing/afterburner/graphics-cards) is the industry standard for GPU tuning. It allows you to push your hardware past factory limits for extra frames, or optimize it for cooler, quieter operation. 
@@ -118,7 +120,7 @@ Cooling & Stability Tweaks:
 - Custom Fan Curve: The default GPU fan curves prioritize being completely silent, which causes the card to run unnecessarily hot. Setting an aggressive fan curve (e.g., 70% fan speed at 70°C) will keep the card icy and prevent heat-induced stutters.
 - RivaTuner Statistics Server (RTSS): This installs alongside Afterburner. It provides the On-Screen Display (OSD) so you can monitor your FPS, 1% lows, and hardware temperatures in real-time while in a game.
 
-#### 5. Use Modded Windows
+#### 4. Use Modded Windows
 Expected Impact: Extreme
 
 > *It is recommended you follow a youtube guide to use this app.*
@@ -157,6 +159,9 @@ Instruction:
 #### 3. LACT
 Expected Impact: High
 
+> *Works on discrete GPUs only*
+> *It is recommended you follow a youtube guide to use this app.*
+
 An alternative to MSI Afterburner for Linux, we **LACT (Linux GPU Control Application)** that provides the exact same functionality. Originally built just for AMD, LACT now fully supports AMD, Nvidia, and Intel GPUs all inside one unified, easy-to-use GUI.
 
 - **For All GPUs (AMD, Nvidia, Intel):** LACT allows you to easily push your GPU's core clocks, VRAM clocks, and power limits for basic overclocking. 
@@ -166,57 +171,94 @@ An alternative to MSI Afterburner for Linux, we **LACT (Linux GPU Control Applic
 *(Note for Nvidia Users: To unlock overclocking limits, you may still need to enable the "Coolbits" registry value via the terminal in your Nvidia driver settings before LACT can apply clock offsets).*
 
 # Bios
-> Warning! This requires careful execution knowledge.
 
-Things can get risky here so learn about it and take your time, improper values may brick the components entirely so do it at your own risk but do set your CPU Power Limits (PL1 / PL2) regardless.
+> *It is strongly recommended that you follow a YouTube guide and research your specific motherboard and CPU before changing values. Otherwise, you can cause boot loops, overheating, or hardware instability.*
 
-- #### CPU Power Limits (PL1 / PL2)
-  Motherboard manufacturers often set completely unrestrained power limits out of the box to win benchmark scores, which causes chips to run dangerously hot for very little actual gaming gain. PL1 (Long Duration Power Limit) and PL2 (Short Duration Power Limit) dictate how much wattage your CPU is allowed to pull. Manually setting these limits to Intel or AMD's official specifications—or slightly below them—drastically reduces temperatures and fan noise without dropping your gaming FPS.
+- **CPU Power Limits (PL1 / PL2)**
 
-- #### Performance Mode
-  Expected Impact: High
+  Expected Impact: High for Cooling & Safety | Low for Performance
 
-  Some bios have "Performance Mode" which is a quick way to setup ideal settings for maximum performance set by the manufacturers, so enabling will give significant uplift in performance but if something works oddly you may go back to normal.
+  > Look up your exact CPU's official TDP / PL1 & PL2 specs online before dialing these in.
+  
+  Motherboards often remove power limits out of the box to boost benchmark scores, causing extreme heat for minimal gaming gain. Manually setting PL1 (Long Duration) and PL2 (Short Duration) to your CPU's official spec—or slightly below—drastically lowers temps and fan noise without hurting FPS.
 
-- #### XMP / EXPO (Memory Profiles)
-  Expected Impact: High
+- **Performance Mode / Multi-Core Enhancement (MCE)**
 
-  This is the biggest free performance upgrade. Running RAM at its rated speed rather than stock speed yields a 10% to 20% FPS boost in CPU-bound games (like CS2, Valorant, or 1080p gaming).
+  Expected Impact: Medium for Performance | Medium-High Risk for Cooling & Stability (Proceed with Caution)
 
-- #### RAM Boot Speed (Fast Boot)
-  Expected Impact: High for Boot Times, 0% for Gaming
+  This one-click toggle forces all CPU cores to run at max boost simultaneously. It gives a decent FPS bump, but often overvolts the chip and causes thermal throttling. Test it while watching your temps—if it runs too hot or crashes, revert to Auto.
 
-  Enabling "Fast Boot" or "Memory Fast Boot" reduces the time it takes for your PC to power on by skipping specific hardware initialization checks during startup. Keep this disabled while you are testing new hardware or applying new overclocks, but enable it once your system is fully stable to significantly speed up your boot times.
+- **XMP / EXPO (Memory Profiles)**
 
-- #### Memory Training (Memory Context Restore)
-  When you turn on your PC, the motherboard tests the RAM to find the best signal integrity (Memory Training). This can make boot times painfully slow, especially on newer platforms. Once you know your XMP or EXPO profile is completely stable without any crashes, look for a setting called "Memory Context Restore" and enable it. This forces the system to remember the last successful training configuration, bypassing the training phase and booting much faster.
+  Expected Impact: High for Performance & Latency | Low Risk for Stability
 
-- #### Manual Memory Timing Overclock
-  If you want to go beyond XMP/EXPO, you can manually "tighten" your RAM timings (such as CL, tRCD, tRP, tRAS). Tight timings drastically reduce system memory latency and heavily boost your 1% low FPS, making gameplay incredibly smooth. However, this is the most tedious, crash-prone optimization you can do. Only attempt this if you are using a detailed guide for your specific RAM die type and are completely comfortable shorting the CMOS pins or removing the motherboard battery when the PC refuses to boot.
+  By default, RAM runs at slow fallback speeds. Enabling XMP (Intel) or EXPO (AMD) unlocks your RAM's rated speed, giving a free 10–20% FPS boost and smoother 1% lows in CPU-heavy games like CS2 and Valorant. If your PC crashes, drop the RAM frequency down one notch (e.g., 3600MHz to 3200MHz).
 
-- #### Turbo Boost Technology 2.0/3.0
-  This is Intel's built-in boosting algorithm that allows your CPU to automatically clock higher than its base speed when thermal headroom and power limits allow. Always ensure this is Enabled. Disabling it will lock your CPU to its base frequency and severely cripple your performance in modern games.
+- **RAM Boot Speed (Fast Boot)**
 
-- #### Efficient Turbo Boost
-  Many modern motherboards have an "Energy Efficient Turbo" setting that tries to balance power consumption with boost clocks. Disabling this forces your CPU to favor maximum clock speeds and responsiveness rather than aggressively downclocking to save a few watts of electricity. For pure gaming performance, keep these power-saving limits disabled.
+  Expected Impact: High for Boot Speed | None for Performance & Latency
 
-- #### Hyperthreading
-  This is Intel's technology that splits physical CPU cores into two virtual threads (e.g., an i7 4770 having 4 Cores and 8 Threads). Generally, you should leave this Enabled. However, if you are running an older processor and only play older eSports titles (like CS2 or Valorant), disabling Hyperthreading can sometimes reduce CPU temperatures and slightly improve frame pacing by forcing the game to only use physical cores. Be aware that disabling it will heavily reduce your background multitasking performance.
+  Skips certain hardware checks at startup to power on faster. Keep this Disabled while testing new tweaks so you can easily enter the BIOS if something breaks, then turn it On once everything is stable.
 
-- #### Multithreading (SMT)
-  This is AMD's equivalent to Hyperthreading, known as Simultaneous Multithreading. The exact same rules apply: leave it Enabled for 99% of modern games, productivity tasks, and multitasking. Disabling it is only recommended if you are trying to squeeze out a few extra frames in very specific, older CPU-bound competitive games that do not know how to handle virtual threads properly.
+- **Memory Training (Memory Context Restore)**
 
-- #### Resizable BAR (ReBAR) / Smart Access Memory (SAM)
-  Expected Impact: Medium-High
+  Expected Impact: High for Boot Speed | Medium Risk for Stability (Enable Only After Testing)
+  
+  Forces your motherboard to remember your last successful RAM boot instead of retraining the memory every startup. Only enable this after confirming your XMP/EXPO profile is 100% crash-free. If you get Blue Screens, turn it back off.
 
-  This is one of the easiest ways to get a completely free 5–15% performance boost in modern games. By default, your CPU can only access your GPU's VRAM in small 256MB chunks. Enabling Resizable BAR (known as Smart Access Memory on AMD platforms) allows the CPU to access the entire VRAM buffer at once, removing a massive data bottleneck.
+- **Manual Memory Timing Overclock**
+  Expected Impact: High for Latency & 1% Lows | High Risk for Stability (Advanced / Risky)
 
-  To enable it, you must first disable CSM (Compatibility Support Module) to ensure your BIOS is in pure UEFI mode, and then enable Above 4G Decoding. Once those are set, the Resizable BAR option will appear or become toggleable.
+  > **Warning!**
+  > *Bad timings will stop your PC from booting. Only try this if you know how to reset your BIOS by clearing CMOS (shorting motherboard jumper pins or removing the CMOS battery).*
+  
+  Manually tightening secondary RAM timings (CL, tRCD, tRP, tRAS) slashes latency and boosts 1% lows beyond standard XMP/EXPO. It is tedious and crash-prone—follow a guide for your exact RAM die and stress-test with TestMem5 or OCCT.
 
-  Note: This feature is natively supported on newer hardware (like the i7-11700K and RTX 3060 Ti). Older platforms (like the 4th Gen Intels and GTX 10/16 series you tested) do not natively support this, though advanced users sometimes use community UEFI mods like ReBarUEFI to force it on older motherboards.
+- **Turbo Boost Technology 2.0/3.0**
 
-- #### Storage Mode
-  On older hardware you may be running in IDE or RAID mode. Set it to **AHCI**. Also, ensure your boot mode is set from Legacy to UEFI. This provides significantly better stability and faster drive communication.
+  Expected Impact: High for Performance | Safe
+  
+  Allows your CPU to automatically boost past its base clock when thermals allow. Always keep this Enabled—turning it off locks your CPU to its slow base speed and tanks gaming performance.
 
-- #### Update Bios
-  This is optional and risky! This does nothing in terms of performance but maybe do something for stability. It does unlock options and improve any known flaws or security issues. 
+- **Efficient Turbo Boost**
+
+  Expected Impact: Low-Medium for Latency & Performance | Safe
+  
+  Attempts to save power by aggressively downclocking your CPU between workloads. Keep this Disabled so your CPU maintains higher clocks and snappier responsiveness during gameplay.
+
+- **Hyperthreading**
+
+  Expected Impact: Low-Medium for Performance & Cooling (Situational)
+  
+  Splits physical cores into virtual threads. Keep this Enabled for 99% of modern games and multitasking. Disabling it only helps on older CPUs playing older eSports titles (like CS2 or Valorant), slightly lowering temps and improving frame pacing at the cost of heavy multitasking performance.
+
+- **Resizable BAR (ReBAR) / Smart Access Memory (SAM)**
+
+  Expected Impact: Medium-High for Performance | Safe
+
+  Lets your CPU access your GPU's entire VRAM buffer at once instead of tiny 256MB chunks, giving a free 5–15% FPS boost in modern games.
+
+  To enable it:
+    1. Disable CSM (forces pure UEFI mode).
+    2. Enable Above 4G Decoding.
+    3. Set Resizable BAR Support to Auto / Enabled.
+
+  *Hardware Note: Natively supported on newer hardware (10th/11th Gen Intel + RTX 30-series or Ryzen 3000/5000 + RX 6000-series and newer). Older hardware requires community UEFI mods.*
+
+- **Storage Mode (AHCI) & Boot Mode (UEFI)**
+
+  Expected Impact: Medium for Stability & Responsiveness | Medium Risk (May Break Existing OS Boot)
+
+  > **Warning!**
+  > *Switching these on an existing Windows install can prevent Windows from booting unless you convert your drive from MBR to GPT first.*
+  
+  Switch Storage Mode from IDE/RAID to AHCI and Boot Mode from Legacy to UEFI for proper SSD TRIM support, faster drive communication, and ReBAR compatibility.
+
+- **Update Bios**
+
+  Expected Impact: Medium for Stability & Compatibility | High Risk for Safety (Proceed with Caution)
+
+  > **Warning!**
+  > Never shut down or unplug your PC during a BIOS update. Losing power mid-flash can permanently brick your motherboard unless it has a BIOS Flashback button.
+  
+  Rarely boosts FPS directly unless an update adds RAM compatibility, security fixes, or ReBAR support. If your PC is already stable and doesn't need a specific feature from the changelog, skip it.
