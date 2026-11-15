@@ -207,6 +207,7 @@ An alternative to MSI Afterburner for Linux, we **LACT (Linux GPU Control Applic
   Forces your motherboard to remember your last successful RAM boot instead of retraining the memory every startup. Only enable this after confirming your XMP/EXPO profile is 100% crash-free. If you get Blue Screens, turn it back off.
 
 - **Manual Memory Timing Overclock**
+  
   Expected Impact: High for Latency & 1% Lows | High Risk for Stability (Advanced / Risky)
 
   > **Warning!**
