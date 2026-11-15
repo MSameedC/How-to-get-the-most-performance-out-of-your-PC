@@ -142,7 +142,6 @@ Used Distros:
 Expected Impact: High for Performance & Latency | Safe
 
 On Steam you can use commands to change the behavior of how some games are launched.
-- Use GE_Proton. 
 - `VKD3D_CONFIG=no_upload_hvv %command%` prevents severe VRAM spilling, fixing massive stuttering and freezing in heavy DirectX 12 games.
 - `gamemoderun %command%` Provides a minor 1-3% FPS uplift but ensures your CPU stays at maximum clock speeds, preventing random frame drops during explosions or heavy scenes. `sudo pacman -S gamemode` or `yay -S gamemode` *(depending on your package manager)*.
 
@@ -154,7 +153,7 @@ Proton converts DirectX games to Vulkun. Proton GE is a boosted version of norma
 Instruction:
 - Run `sudo pacman -S protonup-qt` or `yay -S protonup-qt` (depending on your package manager), or download it via Flatpak.
 - Open the app, install the latest GE-Proton.
-- Open Steam, go to Steam Settings > Compatibility and change the default tool to your newly installed GE-Proton version.
+- Open Steam, go to `Settings > Compatibility` and change the default tool to your newly installed GE-Proton version.
 
 #### 3. LACT
 Expected Impact: High for Performance & Stability (Hardware must support Vulkan 1.3+) | Safe
