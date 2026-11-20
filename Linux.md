@@ -7,6 +7,11 @@ Used Distros:
 - **EndeavourOS** is a good balance for work and gaming.
 - **Ubuntu/Fedora** are a safe starting point.
 
+**Quick Steps**
+1. Apply Steam Commands
+2. Use Proton GE
+3. Use LACT for GPU Overclocking
+
 ## Optimizations
 
 #### 1. Steam Commands
