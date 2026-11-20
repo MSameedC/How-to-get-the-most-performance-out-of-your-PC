@@ -33,9 +33,9 @@ The hardware mentioned here are my own that were owned at some point.
 - Lenovo Thinkbook 15 G4 ABA | Ryzen 7 5825U (integrated)
 
 ## Table of Contents
-1. [Windows Optimizations](./Windows)
-2. [Linux Optimizations](./Linux)
-3. [BIOS Tweaks & Overclocking](./Bios)
+1. [Windows Optimizations](./Windows.md)
+2. [Linux Optimizations](./Linux.md)
+3. [BIOS Tweaks & Overclocking](./Bios.md)
 
 # Introduction
 I have personally researched and tested all of the optimization techniques on multiple devices belonging to me, my friends and family members have optimized their hardware according to their needs. Most noticeable performance gains are on older outed hardware. It is recommended you learn about these changes first and then perform those changes, regardless of their difficulty.
