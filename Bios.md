@@ -2,7 +2,7 @@
 
 > *It is strongly recommended that you follow a YouTube guide and research your specific motherboard and CPU before changing values. Otherwise, you can cause boot loops, overheating, or hardware instability.*
 
-Quick Steps:
+**Quick Steps:**
 
 1. Set Storage Mode (AHCI) & Boot Mode (UEFI)
 2. Set CPU Power Limits (PL1 / PL2)
